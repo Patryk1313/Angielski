@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="app">
-    <aside class="sidebar">
+    <aside class="sidebar" id="mainSidebar">
       <div class="sidebar-tools">
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Przelacz motyw">
           Przelacz na tryb nocny
@@ -24,8 +24,25 @@
         <button class="nav-btn" data-target="summary">Podsumowanie</button>
       </nav>
     </aside>
+    <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Zamknij menu"></button>
 
     <main class="content">
+      <header class="mobile-topbar">
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          type="button"
+          aria-label="Otworz menu"
+          aria-expanded="false"
+          aria-controls="mainSidebar"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <p class="mobile-title">Angielski od podstaw</p>
+      </header>
+
       <section id="pronouns" class="section active panel">
         <h2>Zaimki osobowe (Pronouns)</h2>
         <p>Zaimek osobowy mówi, <strong>kto wykonuje czynność</strong>. W języku angielskim zaimek zwykle stoi przed czasownikiem.</p>

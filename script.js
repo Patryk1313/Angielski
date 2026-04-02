@@ -2,7 +2,26 @@
 const buttons = document.querySelectorAll('.nav-btn');
 const sections = document.querySelectorAll('.section');
 const themeToggle = document.getElementById('themeToggle');
+const menuToggle = document.getElementById('menuToggle');
+const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 const root = document.documentElement;
+const desktopQuery = window.matchMedia('(min-width: 1080px)');
+
+function openSidebar() {
+  document.body.classList.add('sidebar-open');
+
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-expanded', 'true');
+  }
+}
+
+function closeSidebar() {
+  document.body.classList.remove('sidebar-open');
+
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+}
 
 function setTheme(themeName) {
   root.setAttribute('data-theme', themeName);
@@ -36,7 +55,39 @@ function activateSection(targetId) {
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     activateSection(button.dataset.target);
+
+    if (!desktopQuery.matches) {
+      closeSidebar();
+    }
   });
+});
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('sidebar-open');
+
+    if (isOpen) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+}
+
+if (sidebarBackdrop) {
+  sidebarBackdrop.addEventListener('click', closeSidebar);
+}
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeSidebar();
+  }
+});
+
+desktopQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    closeSidebar();
+  }
 });
 
 if (themeToggle) {
@@ -48,3 +99,4 @@ if (themeToggle) {
 }
 
 initTheme();
+closeSidebar();
