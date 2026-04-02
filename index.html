@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angielski dla początkujących - teoria</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-tools">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Przelacz motyw">
+          Przelacz na tryb nocny
+        </button>
+      </div>
+      <nav class="nav-scroll">
+        <button class="nav-btn active" data-target="pronouns">1. Zaimki osobowe</button>
+        <button class="nav-btn" data-target="present-simple">2. Present Simple</button>
+        <button class="nav-btn" data-target="affirmative">3. Zdania twierdzące</button>
+        <button class="nav-btn" data-target="negative">4. Przeczenia</button>
+        <button class="nav-btn" data-target="questions">5. Pytania</button>
+        <button class="nav-btn" data-target="verbs">6. Podstawowe czasowniki</button>
+        <button class="nav-btn" data-target="summary">Podsumowanie</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="pronouns" class="section active panel">
+        <h2>Zaimki osobowe (Pronouns)</h2>
+        <p>Zaimek osobowy mówi, <strong>kto wykonuje czynność</strong>. W języku angielskim zaimek zwykle stoi przed czasownikiem.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Zaimek</th>
+              <th>Znaczenie</th>
+              <th>Przykład</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>I</td><td>ja</td><td>I live in Warsaw.</td></tr>
+            <tr><td>you</td><td>ty / wy</td><td>You speak English.</td></tr>
+            <tr><td><span class="highlight">he</span></td><td>on</td><td><span class="highlight">He</span> works in a bank.</td></tr>
+            <tr><td><span class="highlight">she</span></td><td>ona</td><td><span class="highlight">She</span> likes coffee.</td></tr>
+            <tr><td><span class="highlight">it</span></td><td>to</td><td><span class="highlight">It</span> looks new.</td></tr>
+            <tr><td>we</td><td>my</td><td>We play football on Sundays.</td></tr>
+            <tr><td>they</td><td>oni / one</td><td>They eat lunch at noon.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="hint">Najważniejsze: <span class="highlight">he / she / it</span> mają specjalną formę czasownika w Present Simple.</p>
+      </section>
+
+      <section id="present-simple" class="section panel">
+        <h2>Present Simple - odmiana</h2>
+        <p>Czas Present Simple opisuje rutynę, fakty i stałe sytuacje. Dla większości osób używasz podstawowej formy czasownika.</p>
+
+        <div class="formula">I/You/We/They + czasownik, ale <span class="highlight">He/She/It + czasownik + s</span></div>
+
+        <h3>Tabela odmiany (na przykładzie czasownika work)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Osoba</th>
+              <th>Forma</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>I</td><td>I work</td></tr>
+            <tr><td>You</td><td>You work</td></tr>
+            <tr><td><span class="highlight">He</span></td><td><span class="highlight">He works</span></td></tr>
+            <tr><td><span class="highlight">She</span></td><td><span class="highlight">She works</span></td></tr>
+            <tr><td><span class="highlight">It</span></td><td><span class="highlight">It works</span></td></tr>
+            <tr><td>We</td><td>We work</td></tr>
+            <tr><td>They</td><td>They work</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Przykłady</h3>
+        <ul>
+          <li>I play tennis every week.</li>
+          <li>They live in a small town.</li>
+          <li><span class="highlight">She likes</span> classical music.</li>
+          <li><span class="highlight">He goes</span> to school by bus.</li>
+        </ul>
+
+        <h3>Najczęstsze błędy</h3>
+        <ul>
+          <li><span class="bad">He work</span> every day. -> <span class="good">He works</span> every day.</li>
+          <li><span class="bad">She go</span> to work. -> <span class="good">She goes</span> to work.</li>
+          <li><span class="bad">It eat</span> fish. -> <span class="good">It eats</span> fish.</li>
+        </ul>
+      </section>
+
+      <section id="affirmative" class="section panel">
+        <h2>Zdania twierdzące</h2>
+        <p>W zdaniach twierdzących używasz prostego schematu: osoba + czasownik. W 3. osobie liczby pojedynczej dodaj <span class="highlight">-s</span>.</p>
+
+        <div class="formula">Osoba + czasownik (+ reszta zdania)</div>
+
+        <ul>
+          <li>I work in an office.</li>
+          <li>We play after school.</li>
+          <li><span class="highlight">He lives</span> in Gdansk.</li>
+          <li><span class="highlight">She eats</span> breakfast at 7:00.</li>
+          <li><span class="highlight">It looks</span> good.</li>
+        </ul>
+
+        <p class="hint">Jeśli podmiot to he, she lub it, pamiętaj o końcówce -s lub -es.</p>
+      </section>
+
+      <section id="negative" class="section panel">
+        <h2>Przeczenia</h2>
+        <p>W Present Simple przeczenia tworzymy przy pomocy <strong>do not (don't)</strong> i <strong>does not (doesn't)</strong>.</p>
+
+        <div class="formula">I/You/We/They + don't + czasownik<br />He/She/It + doesn't + czasownik</div>
+
+        <h3>Przykłady zdań</h3>
+        <ul>
+          <li>I don't like cold weather.</li>
+          <li>They don't work on Sunday.</li>
+          <li><span class="highlight">He doesn't play</span> computer games.</li>
+          <li><span class="highlight">She doesn't eat</span> meat.</li>
+          <li><span class="highlight">It doesn't rain</span> much here.</li>
+        </ul>
+
+        <h3>Najczęstsze błędy</h3>
+        <ul>
+          <li><span class="bad">He doesn't plays</span> football. -> <span class="good">He doesn't play</span> football.</li>
+          <li><span class="bad">She don't like</span> tea. -> <span class="good">She doesn't like</span> tea.</li>
+          <li><span class="bad">It don't work</span>. -> <span class="good">It doesn't work</span>.</li>
+        </ul>
+      </section>
+
+      <section id="questions" class="section panel">
+        <h2>Pytania</h2>
+        <p>Pytania w Present Simple tworzymy przez postawienie operatora na początku zdania:</p>
+
+        <div class="formula">Do + I/you/we/they + czasownik?<br />Does + he/she/it + czasownik?</div>
+
+        <h3>Przykłady</h3>
+        <ul>
+          <li>Do you work here?</li>
+          <li>Do they live in London?</li>
+          <li><span class="highlight">Does he play</span> tennis?</li>
+          <li><span class="highlight">Does she like</span> pizza?</li>
+          <li><span class="highlight">Does it work</span> well?</li>
+        </ul>
+
+        <h3>Wskazówki</h3>
+        <ul>
+          <li>Po <strong>does</strong> czasownik wraca do podstawowej formy: <span class="good">Does she work?</span></li>
+          <li>Nie dodawaj końcówki -s po <strong>does</strong>: nie mów <span class="bad">Does she works?</span></li>
+          <li>W krótkich odpowiedziach używaj: Yes, I do. / No, he doesn't.</li>
+        </ul>
+      </section>
+
+      <section id="verbs" class="section panel">
+        <h2>Podstawowe czasowniki</h2>
+        <p>Poniżej masz osiem kluczowych czasowników. Przy każdym zobaczysz tłumaczenie, przykłady i wyróżnioną formę dla <span class="highlight">he/she/it</span>.</p>
+
+        <div class="card-grid">
+          <article class="mini-card">
+            <div class="verb-title"><strong>be</strong><span class="tag">być</span></div>
+            <ul>
+              <li>I am happy today.</li>
+              <li>They are at home.</li>
+              <li><span class="highlight">She is</span> very kind.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>have</strong><span class="tag">mieć</span></div>
+            <ul>
+              <li>I have a new book.</li>
+              <li>We have lunch at school.</li>
+              <li><span class="highlight">He has</span> a small dog.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>go</strong><span class="tag">iść / jechać</span></div>
+            <ul>
+              <li>I go to work at 8:00.</li>
+              <li>They go by train.</li>
+              <li><span class="highlight">She goes</span> to the gym.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>work</strong><span class="tag">pracować</span></div>
+            <ul>
+              <li>I work in a shop.</li>
+              <li>We work every day.</li>
+              <li><span class="highlight">He works</span> in a hospital.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>play</strong><span class="tag">grać / bawić się</span></div>
+            <ul>
+              <li>I play chess.</li>
+              <li>They play in the park.</li>
+              <li><span class="highlight">She plays</span> the piano.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>eat</strong><span class="tag">jeść</span></div>
+            <ul>
+              <li>I eat breakfast early.</li>
+              <li>We eat together.</li>
+              <li><span class="highlight">It eats</span> fish.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>like</strong><span class="tag">lubić</span></div>
+            <ul>
+              <li>I like English lessons.</li>
+              <li>They like this place.</li>
+              <li><span class="highlight">He likes</span> tea.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="verb-title"><strong>live</strong><span class="tag">mieszkać</span></div>
+            <ul>
+              <li>I live in Poznan.</li>
+              <li>We live near the river.</li>
+              <li><span class="highlight">She lives</span> in Krakow.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="summary" class="section panel">
+        <h2>Podsumowanie</h2>
+        <ul class="summary-list">
+          <li>W Present Simple dla I/you/we/they używasz podstawowej formy czasownika.</li>
+          <li>Dla <span class="highlight">he/she/it</span> dodajesz końcówkę <span class="highlight">-s</span> lub <span class="highlight">-es</span>.</li>
+          <li>Przeczenia: don't dla I/you/we/they oraz doesn't dla he/she/it.</li>
+          <li>Pytania: Do... ? dla I/you/we/they oraz Does... ? dla he/she/it.</li>
+          <li>Po does i doesn't czasownik wraca do formy podstawowej.</li>
+          <li>Najważniejsze na start: regularnie czytaj krótkie zdania i zauważaj formy he/she/it.</li>
+        </ul>
+        <p class="hint">Ta strona jest materiałem teoretycznym: bez quizów i testów, tylko przejrzysta nauka krok po kroku.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
