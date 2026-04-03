@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#182438" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Angielski" />
   <title>Angielski dla początkujących - teoria</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,15 +20,15 @@
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Przelacz motyw">
           Przelacz na tryb nocny
         </button>
+        <a class="quick-link" href="quiz.html">100 pytan - uzupelnianie</a>
       </div>
       <nav class="nav-scroll">
         <button class="nav-btn active" data-target="pronouns">1. Zaimki osobowe</button>
         <button class="nav-btn" data-target="present-simple">2. Present Simple</button>
-        <button class="nav-btn" data-target="affirmative">3. Zdania twierdzące</button>
-        <button class="nav-btn" data-target="negative">4. Przeczenia</button>
-        <button class="nav-btn" data-target="questions">5. Pytania</button>
-        <button class="nav-btn" data-target="verbs">6. Podstawowe czasowniki</button>
-        <button class="nav-btn" data-target="summary">Podsumowanie</button>
+        <button class="nav-btn" data-target="sentence-building">3. Typy zdań (SVO)</button>
+        <button class="nav-btn" data-target="practice">4. Trening SVO</button>
+        <button class="nav-btn" data-target="verbs">5. Podstawowe czasowniki</button>
+        <button class="nav-btn" data-target="summary">6. Podsumowanie</button>
       </nav>
     </aside>
     <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Zamknij menu"></button>
@@ -46,6 +53,7 @@
       <section id="pronouns" class="section active panel">
         <h2>Zaimki osobowe (Pronouns)</h2>
         <p>Zaimek osobowy mówi, <strong>kto wykonuje czynność</strong>. W języku angielskim zaimek zwykle stoi przed czasownikiem.</p>
+        <div class="svo-note"><strong>SVO start:</strong> w roli <strong>S (Subject)</strong> najczęściej stoi zaimek: I/you/he/she/it/we/they. Potem dajesz <strong>V (Verb)</strong>, a na końcu <strong>O (Object)</strong> lub inną informację. Przykład: <span class="good">She reads books.</span></div>
 
         <table>
           <thead>
@@ -73,7 +81,8 @@
         <h2>Present Simple - odmiana</h2>
         <p>Czas Present Simple opisuje rutynę, fakty i stałe sytuacje. Dla większości osób używasz podstawowej formy czasownika.</p>
 
-        <div class="formula">I/You/We/They + czasownik, ale <span class="highlight">He/She/It + czasownik + s</span></div>
+        <div class="formula">I/You/We/They + czasownik, ale <span class="highlight">He/She/It + czasownik + <span class="ending">s</span></span></div>
+        <div class="svo-note"><strong>SVO w Present Simple:</strong> <strong>S + V + O</strong>; dla he/she/it czasownik dostaje <span class="ending">-s</span> albo <span class="ending">-es</span>. Przykład: I play tennis / He play<span class="ending">s</span> tennis.</div>
 
         <h3>Tabela odmiany (na przykładzie czasownika work)</h3>
         <table>
@@ -86,9 +95,9 @@
           <tbody>
             <tr><td>I</td><td>I work</td></tr>
             <tr><td>You</td><td>You work</td></tr>
-            <tr><td><span class="highlight">He</span></td><td><span class="highlight">He works</span></td></tr>
-            <tr><td><span class="highlight">She</span></td><td><span class="highlight">She works</span></td></tr>
-            <tr><td><span class="highlight">It</span></td><td><span class="highlight">It works</span></td></tr>
+            <tr><td><span class="highlight">He</span></td><td><span class="highlight">He work<span class="ending">s</span></span></td></tr>
+            <tr><td><span class="highlight">She</span></td><td><span class="highlight">She work<span class="ending">s</span></span></td></tr>
+            <tr><td><span class="highlight">It</span></td><td><span class="highlight">It work<span class="ending">s</span></span></td></tr>
             <tr><td>We</td><td>We work</td></tr>
             <tr><td>They</td><td>They work</td></tr>
           </tbody>
@@ -98,84 +107,118 @@
         <ul>
           <li>I play tennis every week.</li>
           <li>They live in a small town.</li>
-          <li><span class="highlight">She likes</span> classical music.</li>
-          <li><span class="highlight">He goes</span> to school by bus.</li>
+          <li><span class="highlight">She like<span class="ending">s</span></span> classical music.</li>
+          <li><span class="highlight">He go<span class="ending">es</span></span> to school by bus.</li>
         </ul>
 
         <h3>Najczęstsze błędy</h3>
         <ul>
-          <li><span class="bad">He work</span> every day. -> <span class="good">He works</span> every day.</li>
-          <li><span class="bad">She go</span> to work. -> <span class="good">She goes</span> to work.</li>
-          <li><span class="bad">It eat</span> fish. -> <span class="good">It eats</span> fish.</li>
+          <li><span class="bad">He work</span> every day. -> <span class="good">He work<span class="ending">s</span></span> every day.</li>
+          <li><span class="bad">She go</span> to work. -> <span class="good">She go<span class="ending">es</span></span> to work.</li>
+          <li><span class="bad">It eat</span> fish. -> <span class="good">It eat<span class="ending">s</span></span> fish.</li>
         </ul>
       </section>
 
-      <section id="affirmative" class="section panel">
-        <h2>Zdania twierdzące</h2>
-        <p>W zdaniach twierdzących używasz prostego schematu: osoba + czasownik. W 3. osobie liczby pojedynczej dodaj <span class="highlight">-s</span>.</p>
+      <section id="sentence-building" class="section panel">
+        <h2>Typy zdań (SVO)</h2>
+        <p>Masz jeden rdzeń merytoryczny: <strong>S + V + O</strong>. Zmienia się tylko operator i forma czasownika.</p>
+        <div class="svo-note"><strong>Rdzeń:</strong> <strong>S</strong> = kto?, <strong>V</strong> = co robi?, <strong>O</strong> = kogo/co dotyczy czynność?.</div>
 
-        <div class="formula">Osoba + czasownik (+ reszta zdania)</div>
-
+        <h3>1. Twierdzenia</h3>
+        <div class="formula">S + V + O</div>
         <ul>
-          <li>I work in an office.</li>
-          <li>We play after school.</li>
-          <li><span class="highlight">He lives</span> in Gdansk.</li>
-          <li><span class="highlight">She eats</span> breakfast at 7:00.</li>
-          <li><span class="highlight">It looks</span> good.</li>
+          <li>I play tennis.</li>
+          <li>They live in Krakow.</li>
+          <li>She work<span class="ending">s</span> in a bank.</li>
         </ul>
 
-        <p class="hint">Jeśli podmiot to he, she lub it, pamiętaj o końcówce -s lub -es.</p>
-      </section>
-
-      <section id="negative" class="section panel">
-        <h2>Przeczenia</h2>
-        <p>W Present Simple przeczenia tworzymy przy pomocy <strong>do not (don't)</strong> i <strong>does not (doesn't)</strong>.</p>
-
-        <div class="formula">I/You/We/They + don't + czasownik<br />He/She/It + doesn't + czasownik</div>
-
-        <h3>Przykłady zdań</h3>
+        <h3>2. Przeczenia</h3>
+        <div class="formula">S + do/does + not + V + O</div>
         <ul>
-          <li>I don't like cold weather.</li>
-          <li>They don't work on Sunday.</li>
-          <li><span class="highlight">He doesn't play</span> computer games.</li>
-          <li><span class="highlight">She doesn't eat</span> meat.</li>
-          <li><span class="highlight">It doesn't rain</span> much here.</li>
+          <li>I do not play tennis.</li>
+          <li>They do not live in Krakow.</li>
+          <li>She does not work in a bank.</li>
         </ul>
 
-        <h3>Najczęstsze błędy</h3>
+        <h3>3. Pytania</h3>
+        <div class="formula">Do/Does + S + V + O?</div>
         <ul>
-          <li><span class="bad">He doesn't plays</span> football. -> <span class="good">He doesn't play</span> football.</li>
-          <li><span class="bad">She don't like</span> tea. -> <span class="good">She doesn't like</span> tea.</li>
-          <li><span class="bad">It don't work</span>. -> <span class="good">It doesn't work</span>.</li>
+          <li>Do you play tennis?</li>
+          <li>Do they live in Krakow?</li>
+          <li>Does she work in a bank?</li>
+        </ul>
+
+        <h3>Błędy krytyczne</h3>
+        <ul>
+          <li><span class="bad">She doesn't work<span class="ending">s</span></span> -> <span class="good">She doesn't work</span></li>
+          <li><span class="bad">Does she works?</span> -> <span class="good">Does she work?</span></li>
+          <li><span class="bad">He work every day.</span> -> <span class="good">He work<span class="ending">s</span> every day.</span></li>
         </ul>
       </section>
 
-      <section id="questions" class="section panel">
-        <h2>Pytania</h2>
-        <p>Pytania w Present Simple tworzymy przez postawienie operatora na początku zdania:</p>
+      <section id="practice" class="section panel">
+        <h2>Trening budowy zdań</h2>
+        <p>Krótka praktyka bez dublowania teorii. Najpierw spróbuj samodzielnie, potem porównaj z odpowiedzią.</p>
 
-        <div class="formula">Do + I/you/we/they + czasownik?<br />Does + he/she/it + czasownik?</div>
-
-        <h3>Przykłady</h3>
+        <h3>Ułóż zdania</h3>
         <ul>
-          <li>Do you work here?</li>
-          <li>Do they live in London?</li>
-          <li><span class="highlight">Does he play</span> tennis?</li>
-          <li><span class="highlight">Does she like</span> pizza?</li>
-          <li><span class="highlight">Does it work</span> well?</li>
+          <li>on / codziennie / do pracy / chodzi</li>
+          <li>oni / nie / mieszkają / w Warszawie</li>
+          <li>czy / ona / lubi / kawę?</li>
+          <li>czy / oni / pracują / w biurze?</li>
         </ul>
 
-        <h3>Wskazówki</h3>
+        <h3>Proponowane odpowiedzi</h3>
         <ul>
-          <li>Po <strong>does</strong> czasownik wraca do podstawowej formy: <span class="good">Does she work?</span></li>
-          <li>Nie dodawaj końcówki -s po <strong>does</strong>: nie mów <span class="bad">Does she works?</span></li>
-          <li>W krótkich odpowiedziach używaj: Yes, I do. / No, he doesn't.</li>
+          <li><span class="good">He go<span class="ending">es</span> to work every day.</span></li>
+          <li><span class="good">They do not live in Warsaw.</span></li>
+          <li><span class="good">Does she like coffee?</span></li>
+          <li><span class="good">Do they work in an office?</span></li>
         </ul>
+
+        <p class="hint">W treningu trzymaj jeden schemat kontroli: operator, podmiot, czasownik, reszta zdania.</p>
       </section>
 
       <section id="verbs" class="section panel">
         <h2>Podstawowe czasowniki</h2>
         <p>Poniżej masz osiem kluczowych czasowników. Przy każdym zobaczysz tłumaczenie, przykłady i wyróżnioną formę dla <span class="highlight">he/she/it</span>.</p>
+        <div class="svo-note"><strong>Ćwiczenie SVO:</strong> do każdego czasownika układaj 3 zdania: twierdzące, przeczące i pytające. Np. I play football. / I don't play football. / Do I play football?</div>
+
+        <div class="verb-lab" aria-live="polite">
+          <h3>Laboratorium czasowników</h3>
+          <p class="hint">Wybierz podmiot, wylosuj czasownik i wpisz poprawną formę w luce.</p>
+
+          <div class="lab-grid">
+            <label class="lab-label" for="labSubject">Podmiot</label>
+            <select id="labSubject" class="lab-select">
+              <option value="I">I</option>
+              <option value="you">you</option>
+              <option value="we">we</option>
+              <option value="they">they</option>
+              <option value="he">he</option>
+              <option value="she">she</option>
+              <option value="it">it</option>
+            </select>
+          </div>
+
+          <div class="lab-actions">
+            <button id="labDrawBtn" class="lab-btn" type="button">Losuj czasownik</button>
+            <p id="labVerbInfo" class="lab-verb-info">Czasownik: -</p>
+          </div>
+
+          <p id="labTask" class="lab-task">Kliknij "Losuj czasownik", aby zacząć.</p>
+
+          <label class="lab-label" for="labAnswer">Twoja forma czasownika</label>
+          <input id="labAnswer" class="lab-input" type="text" autocomplete="off" placeholder="Np. likes / go / is" />
+
+          <div class="lab-actions">
+            <button id="labCheckBtn" class="lab-btn primary" type="button">Sprawdź</button>
+            <button id="labRevealBtn" class="lab-btn" type="button">Pokaż odpowiedź</button>
+          </div>
+
+          <p id="labFeedback" class="lab-feedback"></p>
+          <p id="labStats" class="lab-stats">Seria: 0 | Poprawne: 0 / 0</p>
+        </div>
 
         <div class="card-grid">
           <article class="mini-card">
@@ -192,7 +235,7 @@
             <ul>
               <li>I have a new book.</li>
               <li>We have lunch at school.</li>
-              <li><span class="highlight">He has</span> a small dog.</li>
+              <li><span class="highlight">He ha<span class="ending">s</span></span> a small dog.</li>
             </ul>
           </article>
 
@@ -201,7 +244,7 @@
             <ul>
               <li>I go to work at 8:00.</li>
               <li>They go by train.</li>
-              <li><span class="highlight">She goes</span> to the gym.</li>
+              <li><span class="highlight">She go<span class="ending">es</span></span> to the gym.</li>
             </ul>
           </article>
 
@@ -210,7 +253,7 @@
             <ul>
               <li>I work in a shop.</li>
               <li>We work every day.</li>
-              <li><span class="highlight">He works</span> in a hospital.</li>
+              <li><span class="highlight">He work<span class="ending">s</span></span> in a hospital.</li>
             </ul>
           </article>
 
@@ -219,7 +262,7 @@
             <ul>
               <li>I play chess.</li>
               <li>They play in the park.</li>
-              <li><span class="highlight">She plays</span> the piano.</li>
+              <li><span class="highlight">She play<span class="ending">s</span></span> the piano.</li>
             </ul>
           </article>
 
@@ -228,7 +271,7 @@
             <ul>
               <li>I eat breakfast early.</li>
               <li>We eat together.</li>
-              <li><span class="highlight">It eats</span> fish.</li>
+              <li><span class="highlight">It eat<span class="ending">s</span></span> fish.</li>
             </ul>
           </article>
 
@@ -237,7 +280,7 @@
             <ul>
               <li>I like English lessons.</li>
               <li>They like this place.</li>
-              <li><span class="highlight">He likes</span> tea.</li>
+              <li><span class="highlight">He like<span class="ending">s</span></span> tea.</li>
             </ul>
           </article>
 
@@ -246,7 +289,7 @@
             <ul>
               <li>I live in Poznan.</li>
               <li>We live near the river.</li>
-              <li><span class="highlight">She lives</span> in Krakow.</li>
+              <li><span class="highlight">She live<span class="ending">s</span></span> in Krakow.</li>
             </ul>
           </article>
         </div>
@@ -255,8 +298,9 @@
       <section id="summary" class="section panel">
         <h2>Podsumowanie</h2>
         <ul class="summary-list">
+          <li>Najpierw ustaw szkielet <strong>SVO</strong>: kto? co robi? czego dotyczy czynność?</li>
           <li>W Present Simple dla I/you/we/they używasz podstawowej formy czasownika.</li>
-          <li>Dla <span class="highlight">he/she/it</span> dodajesz końcówkę <span class="highlight">-s</span> lub <span class="highlight">-es</span>.</li>
+          <li>Dla <span class="highlight">he/she/it</span> dodajesz końcówkę <span class="ending">-s</span> lub <span class="ending">-es</span>.</li>
           <li>Przeczenia: don't dla I/you/we/they oraz doesn't dla he/she/it.</li>
           <li>Pytania: Do... ? dla I/you/we/they oraz Does... ? dla he/she/it.</li>
           <li>Po does i doesn't czasownik wraca do formy podstawowej.</li>

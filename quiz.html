@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#182438" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Angielski" />
+  <title>100 pytan - uzupelnianie</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="quiz-page">
+  <main class="quiz-shell panel quiz-panel">
+    <div class="quiz-header">
+      <div>
+        <h1 class="quiz-title">100 pytan - uzupelnianie</h1>
+        <p class="quiz-subtitle">Uzupelnij brakujace slowo w zdaniu. Losuje sie jedno pytanie naraz.</p>
+      </div>
+      <a href="index.html" class="quiz-back">Wroc do teorii</a>
+    </div>
+
+    <div class="quiz-top-actions">
+      <button id="themeToggleQuiz" class="quiz-btn" type="button">Przelacz na tryb nocny</button>
+    </div>
+
+    <section class="quiz-question-card">
+      <p id="quizMeta" class="quiz-meta">Pytanie: - / 100 | Wynik: 0 / 0</p>
+      <p id="quizType" class="quiz-type"></p>
+
+      <p id="quizSentence" class="quiz-sentence"></p>
+
+      <label class="quiz-label" for="answerInput">Twoja odpowiedz</label>
+      <input id="answerInput" class="quiz-input" type="text" autocomplete="off" placeholder="Np. does / does not / like / likes" />
+
+      <div class="quiz-actions">
+        <button id="checkBtn" class="quiz-btn primary" type="button">Sprawdz</button>
+        <button id="nextBtn" class="quiz-btn" type="button">Losuj kolejne pytanie</button>
+      </div>
+
+      <p id="quizFeedback" class="quiz-feedback"></p>
+    </section>
+
+    <p class="quiz-mini-hint">Enter = szybkie sprawdzenie odpowiedzi</p>
+    <p class="hint">Wskazowka: sprawdzaj szyk SVO i pamietaj, ze po does/does not czasownik jest bez koncowki -s.</p>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
